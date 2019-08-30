@@ -1,0 +1,165 @@
+body{
+    background-color: #ccc;
+}
+
+h1 {
+    color: white;
+
+    text-align: center;
+}
+
+h4 {
+    padding: 1em;
+
+    color: white;
+
+    text-align: center;
+
+    background-color: #EF5350;
+}
+
+header {
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background-color: #EF5350;
+}
+
+.form-container{
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.btn-buscar {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #3B4CCA;
+}
+
+.poke-container {
+    padding: 25px;
+    background-color: white;
+}
+
+a.pokemon {
+    display: block;
+    
+    margin-bottom: 20px;
+}
+
+a.pokemon:hover, a.pokemon:visited, a.pokemon:active {
+    text-decoration: none;
+}
+
+a.pokemon img {
+    display: block;
+
+    margin: 15px auto;
+}
+
+a.pokemon div.contenedor {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+a.pokemon:hover div.contenedor{
+    background-color: #9EDEF9;
+}
+
+a.pokemon div.name {
+    margin-bottom: 5px;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none !important;
+    background-color: #EF5350;
+}
+
+a.pokemon:hover div.name{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+a.pokemon ul.type {
+    display: block;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+a.pokemon ul.type li{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: gray;    
+
+    border-radius: 8px;
+}
+
+a.pokemon:active ul.type li, a.pokemon:visted ul.type li, a.pokemon ul.type li:hover{
+    color: white;
+    text-decoration: none;
+}
+
+a.pokemon ul.type li.Grass{
+    background-color: green;
+}
+
+a.pokemon ul.type li.Poison{
+    background-color: purple;
+}
+
+a.pokemon ul.type li.Fire{
+    background-color: orange;
+}
+
+a.pokemon ul.type li.Flying{
+    background-color: skyblue;
+}
+
+a.pokemon ul.type li.Bug{
+    background-color: sienna;
+}
+
+a.pokemon ul.type li.Water{
+    background-color: teal;
+}
+
+a.pokemon ul.type li.Electric{
+    background-color: yellow;
+}
+
+a.pokemon ul.type li.Ground{
+    background-color: saddlebrown;
+}
+
+a.pokemon ul.type li.Fairy{
+    background-color: salmon;
+}
+
+a.pokemon ul.type li.Psychic{
+    background-color: magenta;
+}
+
+a.pokemon ul.stats li{
+    color: #333;
+    text-decoration: none;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
