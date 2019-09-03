@@ -1,0 +1,101 @@
+body{
+    height: 100vh;
+    background-color: #ccc;
+}
+
+.contenedor{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image{
+    width: 100%;
+    animation: entry 1s;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul.type li, ul.type li, ul.type {
+    color: white;
+    text-decoration: none;
+    margin: 14px;
+    border-radius: 10px;
+    padding: 0;
+}
+
+ul.type li.Grass{
+    background-color: green;
+}
+
+ul.type li.Poison{
+    background-color: purple;
+}
+
+ul.type li.Fire{
+    background-color: orange;
+}
+
+ul.type li.Flying{
+    background-color: skyblue;
+}
+
+ul.type li.Bug{
+    background-color: sienna;
+}
+
+ul.type li.Water{
+    background-color: teal;
+}
+
+ul.type li.Electric{
+    background-color: yellow;
+}
+
+ul.type li.Ground{
+    background-color: saddlebrown;
+}
+
+ul.type li.Fairy{
+    background-color: salmon;
+}
+
+ul.type li.Psychic{
+    background-color: magenta;
+}
+
+.name {
+    color: black;
+    font-weight: bold;
+    font-size: 2.4em;
+    text-shadow: 1px 1px 2px;
+}
+
+.atributo{
+    color: grey;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px;
+}
+
+@keyframes entry {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }

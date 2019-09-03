@@ -22,8 +22,13 @@ function buscar(conFiltro) {
 
             let ataqueMin = document.getElementById("form-ataque-min").value;
             let ataqueMax = document.getElementById("form-ataque-max").value;
-
-            dataArray = filtrar(dataArray, nombre, ataqueMin, ataqueMax);
+            let defMin = document.getElementById("form-defensa-min").value;
+            let defMax = document.getElementById("form-defensa-max").value;
+            let speedMin = document.getElementById("form-velocidad-min").value;
+            let speedMax = document.getElementById("form-velocidad-max").value;
+            let tipo = document.getElementById("form-tipo").value;
+            
+            dataArray = filtrar(dataArray, nombre, ataqueMin, ataqueMax, tipo, defMin, defMax, speedMin, speedMax);
         }
 
         mostrarResultados(dataArray);
@@ -45,19 +50,21 @@ function buscar(conFiltro) {
  * @param {string} nombre 
  * @param {number} ataqueMin 
  * @param {number} ataqueMax 
+ * @param {string} tipo 
+ * @param {number} defMin 
+ * @param {number} defMax 
+ * @param {number} speedMin 
+ * @param {number} speedMax 
  */
-function filtrar(dataArray, nombre, ataqueMin, ataqueMax) {
-    let resultado = [];
-    dataArray.forEach(element => {
-        if ((!nombre || element.name.toLowerCase().indexOf(nombre) >= 0) && //Si especificó nombre
+const filtrar = (dataArray, nombre, ataqueMin, ataqueMax, tipo, defMin, defMax, speedMin, speedMax) => dataArray.map(element => 
+            (!nombre || element.name.toLowerCase().indexOf(nombre) >= 0) && //Si especificó nombre
             (!ataqueMin || element.base.Attack >= ataqueMin) && //Si especificó ataqueMin 
-            (!ataqueMax || element.base.Attack <= ataqueMax)) {  //Si especificó ataqueMax
-            resultado.push(element);
-        }
-
-    });
-    return resultado;
-}
+            (!ataqueMax || element.base.Attack <= ataqueMax) && //Si especificó ataqueMax
+            (!defMin || element.base.Defense >= defMin) && //Si especificó defMin 
+            (!defMax || element.base.Defense <= defMax) && //Si especificó defMax
+            (!speedMin || element.base.Speed >= speedMin) && //Si especificó speedMin 
+            (!speedMax || element.base.Speed <= speedMax) && //Si especificó speedMax
+            (!tipo || element.type.find(t => t === tipo)) ) 
 
 function mostrarResultados(dataArray) {
     let items = document.getElementById("items");
