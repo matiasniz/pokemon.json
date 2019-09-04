@@ -12,7 +12,6 @@ window.onload = async () => {
         if (!pokemon)
             throw "No se encontro el pokemon"
 
-        console.log(pokemon)
         setHead(pokemon)
         setApp(pokemon)
     }catch(err) {
